@@ -1,0 +1,8 @@
+@font-face{
+	font-family: "Eurofurence";
+	src: url(/fonts/eurof35.ttf) format("ttf"),
+	     url(/fonts/eurof55.ttf) format("ttf"),
+	     url(/fonts/eurof75.ttf) format("ttf");
+	font-family: "Georgia";
+	src: url(/fonts/georgiab.ttf) format("ttf");
+}
