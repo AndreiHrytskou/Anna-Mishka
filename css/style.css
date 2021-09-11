@@ -7,8 +7,6 @@ body{
 }
 .wrapper{
 	display: flex;
-	min-height: 100%;
-	overflow: hidden;
 	flex-direction: column;
 }
 .container{
@@ -20,17 +18,17 @@ body{
 	display: flex;
 	justify-content: center;
 	margin: 20px 0 5px 0;
-	background-image:url(/img/Back1.png);
-	background-repeat:repeat;
-}
+	}
 .logo img{
 	width: 100%;
 	height: 150px;
 }
-
+.menu-dark{
+	display: none;
+	visibility: hidden;
+}
 .menu{
 position: relative;
-width: 100%;
 height: 30px;
 }
 .menu ul{
@@ -45,19 +43,17 @@ margin:5px 15px;
 }
 .menu li a{
 	text-decoration: none;
-	color: white;
+	color: rgb(255, 255, 255);
 	font-family: "Georgia";
 	font-size: 16px;
 	text-transform: uppercase;
 }
 .about{
 	background-image: url(/img/Back1.png);
-	background-repeat:repeat;
 	padding: 50px ;
-	height: 100%;
 	display: grid;
 	grid-template-columns: 450px 1fr 1fr;
-	grid-template-rows: 400px;
+	grid-template-rows: 1fr;
 	grid-template-areas: "about-foto about-me about-me ";
 }
 .about-foto{
@@ -67,7 +63,7 @@ margin:5px 15px;
 .about-foto img{
 	width: 250px;
 	height: 350px;
-	margin:25px 0 0 100px;
+	margin: 25px 0 25px 100px;
 }
 .about-me{
 	background-color: rgba(255, 255, 255, 0.8);
@@ -79,39 +75,28 @@ margin:5px 15px;
 }
 .about-me-text{
 	margin-top: 20px;
-	width: 100%;
-	height: auto;
 	font-family: "Eurofurence";
 	font-style: italic;
 	font-size: 18px;
 }
-#gallery {
-	position: relative;
-	padding-top: 50%;
-	user-select: none;
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
 }
-#gallery img {
-	position: absolute;
-	top: 25%;
-	left: 12.5%;
-	max-width: 40%;
-	max-height: 40%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+.gallery img {
+	width: 250px;
+	height: 250px;
+	padding:25px 50px;
 	cursor:pointer;
-	transition: .2s;
 }
-#gallery img:nth-child(4n-2) {left: 37.5%;}
-#gallery img:nth-child(4n-1) {left: 62.5%;}
-#gallery img:nth-child(4n) {left: 87.5%;}
-#gallery img:nth-child(n+5) {top: 75%;}
 #gallery img:focus {
 	position: fixed;
-	top: 50%;
-	left: 50%;
+	top: 0;
+	left: 25%;
 	z-index: 2;
-	max-width: 100%;
-	max-height: 100%;
+	width: 45%;
+	height: 95%;
 	outline: none;
 	pointer-events: none;
 }
@@ -123,14 +108,10 @@ margin:5px 15px;
 	bottom: 0;
 	background: rgba(255, 255, 255, 0.8);
 }
-
-
 .courses{
 	background-image: url(/img/green.png);
 	background-size: cover;
 	background-position: 100% ;
-	width: 100%;
-	height: 100%;
 }
 .courses-header{
 	font-family: "Georgia";
@@ -139,28 +120,21 @@ margin:5px 15px;
 }
 .courses-box{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 }
 .courses-box-item1{
-	margin-left: 25px;
+	margin:0 50px;
 	text-align: center;
 	border: solid 3px rgb(184, 115, 51);
-	width: 25%;
-	height: 100%;
 }
 .courses-box-item2{
+	margin:0 50px;
 	text-align: center;
 	border: solid 3px rgb(184, 115, 51);
-	width: 25%;
-	height: 100%;
 }
 .courses-box-item3{
-	margin-right: 25px;
+	margin:0 50px;
 	text-align: center;
 	border: solid 3px rgb(184, 115, 51);
-	width: 25%;
-	height: 100%;
 }
 .courses-box-item1 h3,
 .courses-box-item2 h3,
@@ -168,7 +142,7 @@ margin:5px 15px;
 	font-family: "Georgia";
 	font-style: italic;
 	font-size: 25px;
-	}
+}
 .courses-box-item1 p,
 .courses-box-item2 p,
 .courses-box-item3 p{
@@ -186,22 +160,21 @@ margin:5px 15px;
 	font-size: 20px;
 }
 .courses-button{
-	width: 180px;
+	text-align: center;
+	margin: 30px;
+}
+.courses-button a{
+	
 	background:rgb(27, 46, 37);
-	color:white;
+	color:rgb(255, 255, 255);
 	font-family: "Georgia";
 	font-size: 20px;
 	text-decoration: none;
 	border-radius: 10px;
 	padding: 10px 25px;
-	margin: 20px auto;
-	display: flex;
-	align-items: center;
 	}
 .price{
-	width: 100%;
 	background:rgba(255, 255, 255, 0.6);
-	background-position:center;
 	display: flex;
 	flex-direction: column;
 	align-items:center;
@@ -214,17 +187,17 @@ margin:5px 15px;
 	list-style: none;
 }
 .price-head{ 
-	margin: 20px;
+	margin-right: 0;
 	display: inline-block;
 	font-family: "Georgia";
-		font-size: 20px;
+	font-size: 20px;
 }
 .price-head::after{
 	content: "-";
 	margin: 20px;
 }
 .price-sum{
-	margin: 20px;
+	margin: 0;
 	display: inline-block;
 	font-family: "Georgia";
 	font-size: 18px;
@@ -232,13 +205,13 @@ margin:5px 15px;
 }
 .price p{
 	margin: 0;
-	color: gray;
+	color: rgb(128, 128, 128);
 	font-family: "Eurofurence";
 	font-style: italic;
 }
 .onlain{
-	background:rgb(27, 46, 37);
-	color:white;
+	background-color:rgb(27, 46, 37);
+	color:rgb(255, 255, 255);
 	font-family: "Georgia";
 	font-size: 20px;
 	text-decoration: none;
@@ -247,22 +220,26 @@ margin:5px 15px;
 	margin-bottom: 25px;
 }
 .footer{
-	width: 100%;
 	position: relative;
-	background: rgb(27, 46, 37);
-	background-size: cover;
-	background-position:center ;
+	background-color: rgb(27, 46, 37);
 	display: grid;
-	grid-template-columns: 20% 40% 40%;
+	grid-template-columns: 30% 30% 40%;
 	grid-template-rows: 500px;
 	grid-template-areas: "bear contact map";
-	}
+}
+.bear{
+	grid-area: bear;
+	width: 75%;
+	height: 60%;
+	position: absolute;
+	left: 15%;
+	top: 20%;
+}
 .contact{
-	width: 100%;
 	grid-area: contact;
 	display: flex;
 	justify-content: center;
-	}
+}
 .contact ul{
 	margin-top: 50px;
 	padding-top: 70px;
@@ -271,16 +248,16 @@ margin:5px 15px;
 	height: 330px
 }
 .contact li{
-	margin:10px 25px 0 0	;
+	margin: 10px 25px 0 0	;
 	}
 .contact a{
 	text-decoration: none;
-	color:black;
+	color:rgb(0, 0, 0);
 	font-family: "Eurofurence";
 	font-size: 20px;
 }
 .contact p{
-	color:black;
+	color:rgb(0, 0, 0);
 	font-family: "Eurofurence";
 	margin: 0;
 	display: inline-block;
@@ -294,29 +271,17 @@ margin:5px 15px;
 	margin-right: 10px;
 }
 .map{
-	width: 100%;
 	grid-area: map;
 	display: flex;
 	justify-content: center;
-}
-.map iframe{
-	width: 100%;
-	margin: 50px 25px ;
+	align-items: center
 }
 .nevedimka{
 	width: 150px;
 	height: 25px;
 	position: absolute;
-	left: 35%;
+	left: 40%;
 	bottom: 75px;
-}
-.bear{
-	grid-area: bear;
-	width: 80%;
-	height: 60%;
-	position: absolute;
-	left:25%;
-	top: 25%;
 }
 @media (max-width:1500px){
 	.container{
@@ -338,9 +303,6 @@ margin:5px 15px;
 	.container{
 		max-width: 997px;
 	}
-	.about-me-text1	{
-		display: none;
-	}
 }
 @media (max-width:992px){
 	.container{
@@ -349,7 +311,34 @@ margin:5px 15px;
 }
 @media (max-width:767px){
 	.container{
-		max-width: none;
-display: block;
+		padding: 0 15px;
+		max-width: 760px;
 	}
+	/*.menu {
+		display: none;
+	}
+	.menu-dark {
+		display: block;
+		visibility:visible;
+		position: relative;
+      height: 30px;
+	}
+	.menu-dark :active{
+		display: block;
+	}
+	.menu-dark ul{
+		display: block;
+		background-color: rgb(27, 46, 37);
+	}
+	.menu-dark li {
+	list-style: none;
+	margin:5px 15px;
+	}
+	.menu-dark li a{
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+		font-family: "Georgia";
+		font-size: 16px;
+		text-transform: uppercase;
+	}*/
 }
